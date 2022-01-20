@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 
 DEFAULT_DEBUG=False
