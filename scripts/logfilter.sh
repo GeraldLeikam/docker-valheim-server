@@ -11,10 +11,11 @@ do
     echo $i
     if [[ $line =~ $i ]]
     then
-      echo true
-    else
-      echo false
+      doprint=false
     fi
   done
-  echo $line
+  if [[ $doprint == true ]]
+  then
+    echo $line
+  fi
 done
