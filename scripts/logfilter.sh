@@ -21,6 +21,6 @@ do
   if [[ $doprint == true ]]
   then
     #echo $line
-    /bin/bash /run/logwriter.sh -s $line -o $OUTPUT_FILE
+    /bin/bash /run/logwriter.sh -s "${line}" -o $OUTPUT_FILE
   fi
 done
