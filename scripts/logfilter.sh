@@ -1,5 +1,5 @@
 #!/bin/bash
-misfits_words=("Filename" "furz")
+misfits_words=("Filename", "furz")
 
 
 while [ true ]
