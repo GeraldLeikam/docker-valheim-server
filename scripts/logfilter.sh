@@ -13,13 +13,12 @@ do
       doprint=false
     fi
   done
-  if [[ $doprint == true ]]
   if [[ -z $line ]] && [[ $doprint == true ]]
-      then
-        doprint=false
-      fi
   then
-
+    doprint=false
+  fi
+  if [[ $doprint == true ]]
+  then
     echo $line
   fi
 done
