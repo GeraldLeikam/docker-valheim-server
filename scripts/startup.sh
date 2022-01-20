@@ -61,3 +61,14 @@ then
 fi
 
 cp -rv /valheim-server/vanilla-server/* /valheim-server/server
+export templdpath=$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/valheim-server/server/linux64:$LD_LIBRARY_PATH
+export SteamAppId=892970
+/valheim-server/server/valheim_server.x86_64 \
+  -name "${SERVER_NAME}" \
+  -port $SERVER_PORT \
+  -world "${WORLD_NAME}" \
+  -password "${SERVER_PASSWORD}" \
+  -savedir $DEFAULT_SAVE_DIR \
+  -public $PUBLIC
+export LD_LIBRARY_PATH=$templdpath
