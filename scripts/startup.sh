@@ -22,7 +22,7 @@ else
 fi
 
 
-if [ $DEBUG \= "true" ];
+if [ $DEBUG = "true" ];
 then
   echo "SERVER_NAME -> ${SERVER_NAME}"
   echo "SERVER_PORT -> ${SERVER_PORT}"
