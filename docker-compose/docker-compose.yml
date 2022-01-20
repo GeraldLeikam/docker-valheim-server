@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  valheim:
+    image: drezael/valheim-server:ubuntu_20.04
+    container_name: valheim_server
+    restart: always
+    ports:
+      - 2456:2456/udp
+      - 2457:2457/udp
+      - 2458:2458/udp
+    environment:
+      - SERVER_NAME=Drezaels TestServer
+      - WORLD_NAME=DrezaelsWorld
+      - PUBLIC=true
+      - AUTOUPDATE=false
+    volumes:
+      - ./server:/valheim-server/server
+      - ./save:/valheim-server/save
