@@ -14,7 +14,7 @@ if [ -n "${SERVER_PORT}" ]; then SERVER_PORT=${SERVER_PORT}; else SERVER_PORT=${
 if [ -n "${WORLD_NAME}" ]; then WORLD_NAME="${WORLD_NAME}"; else WORLD_NAME="${DEFAULT_WORLD_NAME}"; fi
 #if [ -n "${SERVER_PASSWORD}" ] && [ ${#SERVER_PASSWORD} -gt 5 ]; then SERVER_PASSWORD="${SERVER_PASSWORD}"; else SERVER_PASSWORD="${DEFAULT_SERVER_PASSWORD}"; fi
 if [ -n "${GAME_MODE}" ]; then GAME_MODE="${GAME_MODE}"; else GAME_MODE=${DEFAULT_GAME_MODE}; fi
-if [ -n "${SERVER_PASSWORD}" ] && [ "${#SERVER_PASSWORD}" -eq 4 ]
+if [ -n "${SERVER_PASSWORD}" ]
 then
   SERVER_PASSWORD="${SERVER_PASSWORD}"
 else
