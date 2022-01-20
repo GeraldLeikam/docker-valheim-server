@@ -33,15 +33,15 @@ if [ -n "${AUTOUPDATE}" ];
 then
   if [ "$(echo $AUTOUPDATE | tr A-Z a-z)" = "true" ];
   then
-    SCRIPT_AUTOUPDATE="true"
+    AUTOUPDATE="true"
   elif [ "$(echo $AUTOUPDATE | tr A-Z a-z)" = "false" ];
   then
-    SCRIPT_AUTOUPDATE="false"
+    AUTOUPDATE="false"
   else
-    SCRIPT_AUTOUPDATE="false"
+    AUTOUPDATE="false"
   fi
 else
-  SCRIPT_AUTOUPDATE="false"
+  AUTOUPDATE="false"
 fi
 
 if [[ "${DEBUG}" == "true" ]]
@@ -52,5 +52,10 @@ then
   echo "SERVER_PASSWORD -> ${SERVER_PASSWORD}"
   echo "SAVE_DIR -> ${SAVE_DIR}"
   echo "PUBLIC -> ${PUBLIC}"
-  echo "AUTOUPDATE -> ${SCRIPT_AUTOUPDATE}"
+  echo "AUTOUPDATE -> ${AUTOUPDATE}"
+fi
+
+if [ $AUTOUPDATE = "true" ];
+then
+  /usr/games/steamcmd +force_install_dir /valheim-server/server +login anonymous +app_update 896660 validate +exit
 fi

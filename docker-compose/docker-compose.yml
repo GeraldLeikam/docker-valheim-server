@@ -15,7 +15,7 @@ services:
       - WORLD_NAME=DrezaelsWorld
       - SERVER_PASSWORD=thisismypassword
       - PUBLIC=true
-      - AUTOUPDATE=false
+      - AUTOUPDATE=true
     volumes:
       - ./server:/valheim-server/server
       - ./save:/valheim-server/save
