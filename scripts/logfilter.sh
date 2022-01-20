@@ -7,7 +7,7 @@ do
   read line
   for word in $misfits_words
   do
-    echo word
+    echo $word
   done
   echo $line
 done
