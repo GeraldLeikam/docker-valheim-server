@@ -8,8 +8,9 @@ do
     esac
 done
 if [[ -n $output ]]
-then
-  echo true
+  then
+    if [[ -n $string ]]
+    then
+      echo $string | tee -a $output
+    fi
 fi
-echo $string
-echo $output
