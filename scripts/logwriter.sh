@@ -12,7 +12,7 @@ if [[ -n $output ]]
   then
     if [[ -n $string ]]
     then
-      echo $time[0]
-      echo "[" $time "] -> [${string}]" | tee -a $output
+
+      echo "["$(date -d "@$(date +%s)")"] -> [${string}]" | tee -a $output
     fi
 fi
