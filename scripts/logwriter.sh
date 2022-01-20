@@ -7,5 +7,9 @@ do
         o) output=${OPTARG};;
     esac
 done
+if [[ -n $output ]]
+then
+  echo true
+fi
 echo $string
 echo $output
