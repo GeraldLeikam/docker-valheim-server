@@ -15,7 +15,10 @@ do
   done
   if [[ $doprint == true ]]
   then
-    echo ${#line[@]}
+    if [[ -z $line ]]
+    then
+      echo true
+    fi
     echo $line
   fi
 done
