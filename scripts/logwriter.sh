@@ -1,5 +1,5 @@
 #!/bin/bash
-time=$(date -d "@$(date +%s)")
+time=($(date -d "@$(date +%s)"))
 while getopts s:o: flag
 do
     case "${flag}" in
