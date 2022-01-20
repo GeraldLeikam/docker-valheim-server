@@ -13,6 +13,6 @@ if [[ -n $output ]]
     if [[ -n $string ]]
     then
       echo $time[0]
-      echo "['${timw}'] -> [${string}]" | tee -a $output
+      echo "[" $time "] -> [${string}]" | tee -a $output
     fi
 fi
