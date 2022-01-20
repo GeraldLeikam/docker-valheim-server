@@ -3,4 +3,5 @@ RUN /usr/games/steamcmd +force_install_dir /valheim-server/vanilla-server +login
 RUN mkdir -v /valheim-server/save /valheim-server/server
 COPY ./scripts/startup.sh /run/startup.sh
 COPY ./scripts/logfilter.sh /run/logfilter.sh
+COPY ./scripts/logwriter.sh /run/logwriter.sh
 CMD /bin/bash /run/startup.sh
