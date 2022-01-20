@@ -1,5 +1,5 @@
 #!/bin/bash
-
+time=$(date -d "@$(date +%s)")
 while getopts s:o: flag
 do
     case "${flag}" in
@@ -7,10 +7,11 @@ do
         o) output=${OPTARG};;
     esac
 done
+
 if [[ -n $output ]]
   then
     if [[ -n $string ]]
     then
-      echo $string | tee -a $output
+      echo "[${timw}] -> [${string}]" | tee -a $output
     fi
 fi
