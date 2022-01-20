@@ -1,6 +1,7 @@
 #!/bin/bash
 misfits_words=(Filename)
 
+OUTPUT_FILE=/root/valheim-server.log
 
 while [ true ]
 do
@@ -19,6 +20,7 @@ do
   fi
   if [[ $doprint == true ]]
   then
-    echo $line
+    #echo $line
+    /bin/bash /run/logwriter.sh -s $line -o $OUTPUT_FILE
   fi
 done
