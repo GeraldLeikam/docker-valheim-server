@@ -2,4 +2,5 @@ FROM drezael/steamcmd:ubuntu_20.04
 RUN /usr/games/steamcmd +force_install_dir /valheim-server/vanilla-server +login anonymous +app_update 896660 validate +exit
 RUN mkdir -v /valheim-server/save /valheim-server/server
 COPY ./scripts/startup.sh /run/startup.sh
+COPY ./scripts/logfilter.sh /run/logfilter.sh
 CMD /bin/bash /run/startup.sh
