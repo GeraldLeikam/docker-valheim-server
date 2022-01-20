@@ -9,10 +9,10 @@ DEFAULT_SAVE_DIR=/valheim-server/save
 DEFAULT_PUBLIC=1
 DEFAULT_GAME_MODE=vanilla
 
-if [ -n "${SERVER_NAME}" ]; then SERVER_NAME="${SERVER_NAME}"; else SERVER_NAME=${DEFAULT_SERVER_NAME}; fi
 
 
-if [ $DEBUG = "true" ]
+
+if [[ "${DEBUG}" == "true" ]]
 then
   echo "SERVER_NAME -> ${SERVER_NAME}"
   echo "SERVER_PORT -> ${SERVER_PORT}"
