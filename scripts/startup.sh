@@ -57,5 +57,7 @@ fi
 
 if [ $AUTOUPDATE = "true" ];
 then
-  /usr/games/steamcmd +force_install_dir /valheim-server/server +login anonymous +app_update 896660 validate +exit
+  /usr/games/steamcmd +force_install_dir /valheim-server/vanilla-server +login anonymous +app_update 896660 validate +exit
 fi
+
+cp -rv /valheim-server/vanilla-server/* /valheim-server/server
