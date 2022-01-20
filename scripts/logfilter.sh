@@ -8,6 +8,7 @@ do
   read line
   for word in $misfits_words
   do
+    echo $word
     if [[ $line =~ $word ]]
     then
        echo "It's there!"
