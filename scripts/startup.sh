@@ -70,5 +70,5 @@ export SteamAppId=892970
   -world "${WORLD_NAME}" \
   -password "${SERVER_PASSWORD}" \
   -savedir $DEFAULT_SAVE_DIR \
-  -public $PUBLIC | /run/logfilter.sh
+  -public $PUBLIC | /bin/bash /run/logfilter.sh
 export LD_LIBRARY_PATH=$templdpath
