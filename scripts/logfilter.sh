@@ -15,6 +15,7 @@ do
   done
   if [[ $doprint == true ]]
   then
+    echo ${#line[@]}
     echo $line
   fi
 done
