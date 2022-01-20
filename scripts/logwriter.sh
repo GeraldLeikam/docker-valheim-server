@@ -12,7 +12,7 @@ if [[ -n $output ]]
   then
     if [[ -n $string ]]
     then
-      echo $time
+      echo $time[0]
       echo "['${timw}'] -> [${string}]" | tee -a $output
     fi
 fi
