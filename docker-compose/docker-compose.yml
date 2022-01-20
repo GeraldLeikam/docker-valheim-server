@@ -13,6 +13,7 @@ services:
       - DEBUG=true
       - SERVER_NAME=Drezaels TestServer
       - WORLD_NAME=DrezaelsWorld
+      - SEVER_PASSWORD=thisismypassword
       - PUBLIC=true
       - AUTOUPDATE=false
     volumes:
