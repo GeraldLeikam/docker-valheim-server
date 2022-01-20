@@ -8,7 +8,6 @@ do
   read line
   for i in "${misfits_words[@]}"
   do
-    echo $i
     if [[ $line =~ $i ]]
     then
       doprint=false
