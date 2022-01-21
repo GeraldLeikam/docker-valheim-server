@@ -1,5 +1,6 @@
 #!/bin/bash
 
+DEFAULT_LOGFILE=/var/log/valheim-server.log
 DEFAULT_DEBUG=False
 DEFAULT_SERVER_NAME="Default Valheim Server"
 DEFAULT_SERVER_PORT=2456
@@ -12,6 +13,7 @@ DEFAULT_PUBLIC=1
 if [[ -n "${SERVER_NAME}" ]]; then SERVER_NAME="${SERVER_NAME}"; else SERVER_NAME=${DEFAULT_SERVER_NAME}; fi
 if [[ -n "${SERVER_PORT}" ]]; then SERVER_PORT=${SERVER_PORT}; else SERVER_PORT=${DEFAULT_SERVER_PORT} ; fi
 if [[ -n "${WORLD_NAME}" ]]; then WORLD_NAME="${WORLD_NAME}"; else WORLD_NAME="${DEFAULT_WORLD_NAME}"; fi
+if [[ -n "${LOGFILE}" ]]; then LOGFILE="${LOGFILE}"; else LOGFILE="${DEFAULT_LOGFILE}"; fi
 if [[ ${#SERVER_PASSWORD} -gt 4 ]]; then SERVER_PASSWORD="${SERVER_PASSWORD}"; else SERVER_PASSWORD="${DEFAULT_SERVER_PASSWORD}"; fi
 
 if [ -n "${PUBLIC}" ];
@@ -53,6 +55,7 @@ then
   echo "SAVE_DIR -> ${SAVE_DIR}"
   echo "PUBLIC -> ${PUBLIC}"
   echo "AUTOUPDATE -> ${AUTOUPDATE}"
+  echo "LOGFILE -> ${LOGFILE}"
 fi
 
 if [ $AUTOUPDATE = "true" ];

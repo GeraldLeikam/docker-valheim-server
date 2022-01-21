@@ -7,7 +7,7 @@ do
         o) output=${OPTARG};;
     esac
 done
-time=$(date -d "@$(date +%s)")
+
 if [[ -n $output ]]
   then
     if [[ -n $string ]]
