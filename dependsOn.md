@@ -1,1 +1,1 @@
-https://github.com/GeraldLeikam/docker-steamcmd.git
+https://github.com/GeraldLeikam/docker-steamcmd.git ubuntu_20.04_testing
